@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1c465c0c26.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="raj4.webp" alt="Profile Picture of Omkar Dubey">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title-about">About Me</h1>
+                    <p>Hello, I'm Omkar Dubey, a passionate Computer Science and Engineering (CSE) student currently pursuing my BTech in Lovely Professional University.<br><br> I specialize in web development, programming, and data analysis, with a strong interest in building innovative solutions to solve real-world challenges.<br>
+
+                        One of my current projects involves developing weather prediction tools, combining my love for coding and data-driven insights. As I continue to grow in the field of technology, I am eager to learn and work on new projects that push the boundaries of creativity and functionality.<br><br>
+                        
+                        Feel free to explore my work and connect with me. Let’s collaborate to bring exciting ideas to life!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience', event)">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education', event)">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/IOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span><strong>Programming Languages:</strong></span> Python, Java, C++</li>
+                            <li><span><strong>Web Development:</strong></span> HTML, CSS, JavaScript, React</li>
+                            <li><span><strong>Tools & Technologies:</strong></span> Git, GitHub, VS Code</li>
+                            <li><span><strong>Soft Skills:</strong></span> Problem-Solving, Teamwork, Communication</li>
+                        </ul>
+                        
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2024 - Present</span><br>B.Tech in Computer Science and Engineering <br>Lovely Professional University (LPU)</li>
+                            <li><span>2018</span><br>12th Grade, B.B.S Smriti Vidyapeeth</li>
+                            <li><span>2016</span><br>10th Grade, B.B.S Smriti Vidyapeeth</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="Home-button">
+        <a href="index.html" class="home">Home</a>
+    </div>
+    
+    
+    <!-- Script for Tab Functionality -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname, event) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    
+</body>
+</html>
